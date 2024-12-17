@@ -41,6 +41,7 @@ header .header__menu--dropdown {
   position: absolute;
   display: none;
   padding: 1em;
+  z-index: 99;
 }
 header .header__item {
   padding-right: 2em;

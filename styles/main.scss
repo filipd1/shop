@@ -49,6 +49,7 @@ header {
     position: absolute;
     display: none;
     padding: 1em;
+    z-index: 99;
   }
 
   .header__item {
