@@ -15,6 +15,7 @@ a {
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1.2em 10em;
   background-color: #fff9df;
 }
@@ -148,13 +149,78 @@ header .header__item:hover .header__menu--dropdown {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   margin-top: 4em;
+  gap: 1em;
 }
-.container--section .section__cards .section__card__img {
+.container--section .section__cards .section__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container--section .section__cards .section__card .section__card__img {
   width: 300px;
   height: 500px;
 }
-.container--section .section__cards .section__card__category {
+.container--section .section__cards .section__card .section__card__category {
   text-transform: uppercase;
   margin-top: 1em;
   font-weight: bold;
+}
+
+.mobile__menu__icon {
+  display: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 1em;
+  }
+  .container {
+    padding: 4em 1em;
+  }
+  .container--hero .hero__right {
+    display: none;
+  }
+  .container--hero .hero__left {
+    width: 100%;
+  }
+  .container--section .container--flex {
+    flex-direction: column;
+  }
+  .container--section .section__cards {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.6em;
+  }
+}
+@media (max-width: 1115px) {
+  header {
+    padding: 1em 2em;
+  }
+  header .btn {
+    display: none;
+  }
+  header .header__menu {
+    display: none;
+  }
+  .container {
+    padding: 4em 2em;
+  }
+  .mobile__menu__icon {
+    display: block;
+  }
+  .hero__right .hero__img--big {
+    display: none;
+  }
+  .hero__right .hero__img--small {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  .container--section .section__cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+  }
 }/*# sourceMappingURL=main.css.map */
